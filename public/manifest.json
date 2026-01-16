@@ -1,0 +1,46 @@
+
+{
+  "manifest_version": 3,
+  "name": "ChartBuddy",
+  "version": "1.0.1",
+  "description": "Drag-and-drop robot to analyze web charts.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.html",
+        "index.tsx",
+        "App.tsx",
+        "geminiService.ts",
+        "types.ts",
+        "background.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}

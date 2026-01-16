@@ -1,0 +1,8 @@
+{
+  "name": "ChartBuddy",
+  "description": "An intelligent chart analysis extension that helps you understand stock market charts and data visualizations using Gemini AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
