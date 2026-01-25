@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "AI-powered chart analysis using Gemini",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "ChartBuddy AI"
   },
   "background": {
     "service_worker": "background.js",
@@ -16,6 +17,12 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["storage", "activeTab", "scripting"]
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
 }
-
