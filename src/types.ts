@@ -1,16 +1,17 @@
+export type ChartType = "SVG" | "Canvas" | "Unknown";
 
 export interface ChartContext {
   title: string;
   url: string;
-  chartType: 'SVG' | 'Canvas' | 'Unknown';
+  chartType: ChartType;
   x: number;
   y: number;
-  extractedText: string[];
   labels: string[];
+  extractedText: string[];
 }
 
 export interface AnalysisResult {
   summary: string;
   insights: string[];
-  confidence: number;
+  confidence: number; // 0 → 1
 }
