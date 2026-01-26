@@ -43,11 +43,19 @@
   container.appendChild(iframe);
   
   // Toggle visibility logic (can be triggered by background script or toolbar icon)
-  chrome.runtime.onMessage.addListener((request) => {
-    if (request.action === 'TOGGLE_UI') {
-      container.style.display = container.style.display === 'none' ? 'block' : 'none';
-    }
-  });
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === "START_ANALYSIS") {
+    console.log("Popup requested chart analysis");
+
+    chrome.runtime.sendMessage({
+      type: "ANALYZE_CHART",
+      payload: "Sample chart data"
+    });
+
+    sendResponse({ status: "started" });
+  }
+});
+
 
   console.log('ChartBuddy injected.');
 })();
