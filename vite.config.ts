@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "./",
+
   plugins: [react()],
 
   build: {
@@ -13,7 +15,7 @@ export default defineConfig({
       input: {
         popup: resolve(__dirname, "index.html"),
         background: resolve(__dirname, "background.js"),
-        content: resolve(__dirname, "contentScript.js"),
+        content: resolve(__dirname, "content.js")
       },
       output: {
         entryFileNames: "[name].js",
@@ -25,7 +27,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"),
+      "@": resolve(__dirname, ".")
     }
   }
 });
