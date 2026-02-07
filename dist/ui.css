@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 16px;
+  background: #020617;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+#root {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
