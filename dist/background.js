@@ -1,4 +1,4 @@
-const GEMINI_API_KEY ="AIzaSyCeoDWJxGC3ayrlgSWr4dnWk_-A-Vo9phY";
+const GEMINI_API_KEY ="make a .env file and keep your own google ai studio api key";
 
 chrome.runtime.onMessage.addListener((msg, sender) => {
   if (msg.type === "CAPTURE_SNIPPET_IMAGE") {
